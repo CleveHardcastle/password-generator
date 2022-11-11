@@ -27,30 +27,53 @@ function getPrompt() {
     }
     
   var array = []
-
-  if (userLower == true) {
+  var randomSelected = []
+  var userSelected = []
+  
+  if (userLower === true) {
     array = array.concat(lowerCase);
+    randomLower = Math.floor(Math.random() * lowerCase.length);
+    userSelected = userSelected.concat(lowerCase[randomLower]);
   }
   
-  if (userUpper == true) {
+  if (userUpper === true) {
     array = array.concat(upperCase);
+    randomUpper = Math.floor(Math.random() * upperCase.length);
+    userSelected = userSelected.concat(upperCase[randomUpper]);
   }
   
-  if (userInt == true) {
+  if (userInt === true) {
     array = array.concat(int);
+    randomInt = Math.floor(Math.random() * int.length);
+    userSelected = userSelected.concat(int[randomInt]);
   }
   
-  if (userSpecial == true) {
+  if (userSpecial === true) {
     array = array.concat(specialChar);
+    randomSpecial = Math.floor(Math.random() * specialChar.length);
+    userSelected = userSelected.concat(specialChar[randomSpecial]);
+  }
+  for (i = 0; i < (userLength - userSelected.length); i++) {
+    var random = Math.floor(Math.random() * array.length);
+    randomSelected.push(array[random])
   }
 
-  for (i = 0; i < userLength; i++) {
-    var random = Math.floor(Math.random() * array.length);
-    console.log(array);
-  }
+  var finalSelected = userSelected.concat(randomSelected);
+  var final = finalSelected.join("")
+
+}
+
+var generateBtn = document.querySelector('#generate');
+
+function writePassword() {
+  var password = getPrompt();
+  var passwordText = document.querySelector('#password');
+
+  passwordText.value = password;
 }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", getPrompt);
+
 
