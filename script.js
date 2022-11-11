@@ -61,6 +61,8 @@ function getPrompt() {
   var finalSelected = userSelected.concat(randomSelected);
   var final = finalSelected.join("")
 
+  return final;
+
 }
 
 var generateBtn = document.querySelector('#generate');
@@ -74,6 +76,6 @@ function writePassword() {
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", getPrompt);
+generateBtn.addEventListener("click", writePassword);
 
 
