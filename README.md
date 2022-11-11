@@ -12,6 +12,6 @@ Special Thanks:
 
 A big thanks goes out to Sam, without her help and the ability to bounce the questions in my head off her it would have taken me much, much longer to get this done. 
 
-The live link to the site is available here: 
+The live link to the site is available here: https://clevehardcastle.github.io/password-generator/
 
 <img width="1105" alt="Screen Shot 2022-11-10 at 10 09 48 PM" src="https://user-images.githubusercontent.com/116609674/201275042-cf7574de-c24d-48ba-a12f-e905470aef1c.png">
